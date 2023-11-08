@@ -1,0 +1,9 @@
+<nav class="nav">
+  <div class="logo">
+    <img  width="70" height="50" src="assets/img/logo.png" alt="" srcset="">
+  </div>
+  <div class="btn_conainer">
+    <button *ngIf="islogin == false">logIn</button>
+    <button *ngIf="islogin == true" (click)="logout()">LogOut</button>
+  </div>
+</nav>

@@ -1,0 +1,56 @@
+@import "../../../../assets/style/main-style.scss";
+.user_table {
+  .table{
+width: 100%;
+margin: auto;
+padding: 0rem 3rem;
+  }
+  .btn_container {
+    button:first-child {
+      background-color: $btn_bg_color;
+      @extend %btn_style;
+    }
+    button:nth-child(2) {
+      background-color: $btn_bg_color;
+      @extend %btn_style;
+    }
+
+    button:last-child {
+      background-color: $btn_bg_color;
+      @extend %btn_style;
+    }
+  }
+  .btn_edit_conainer{
+    display: flex;
+    justify-content: end;
+    .btn_edit {
+      background-color: $btn_bg_color;
+      padding: 0.5rem 2rem;
+      @extend %btn_style;
+      font-size: 1rem;
+      margin-top: 4rem;
+      margin-inline-end: 2rem;
+     
+    }
+  }
+ 
+  ::ng-deep{
+    .p-datatable .p-datatable-thead > tr > th {
+      text-align: left;
+      padding: 1.3rem !important;
+      border: 1px solid #dee2e6;
+      border-width: 0 0 1px 0;
+      font-size: .95rem;
+     
+    }
+    .p-datatable .p-datatable-tbody > tr > td {
+      text-align: left;
+      padding: 1.5rem !important;
+      border: 1px solid #dee2e6;
+      border-width: 0 0 1px 0;
+      font-size: .95rem;
+
+    }
+  }
+  
+}

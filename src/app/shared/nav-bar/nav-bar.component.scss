@@ -1,0 +1,29 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(128, 128, 128, 0.207);
+  height: 3rem;
+.logo{
+  margin-inline-start: 4rem;
+  margin-top: .5rem ;
+}
+  .btn_conainer {
+    margin-inline-end: 3rem;
+
+    button {
+      border: none;
+      font-size: 1rem;
+      margin-inline-start: 1rem;
+      background: none;
+  
+      color: #000;
+      font-weight: 600;
+      font-family: Arial, Helvetica, sans-serif;
+      cursor: pointer;
+      &:hover {
+        color: rgba(0, 0, 0, 0.413);
+      }
+    }
+  }
+}

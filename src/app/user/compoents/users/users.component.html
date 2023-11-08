@@ -1,0 +1,86 @@
+<div class="user_table">
+  <p-toast></p-toast>
+  <div class="btn_edit_conainer">
+    <button class="btn_edit" routerLink="/user/add-User">add</button>
+  </div>
+  <div class="table">
+    <p-table
+      #dt2
+      [value]="users"
+      dataKey="id"
+      [showCurrentPageReport]="true"
+      [globalFilterFields]="['firstName', 'lastName', 'creationDate', 'email']"
+      [tableStyle]="{ 'min-width': '75rem' }"
+    >
+      <ng-template pTemplate="header">
+        <tr>
+          <th pSortableColumn="firstName" style="width: 19%">
+            first Name <p-sortIcon field="firstName"></p-sortIcon>
+          </th>
+          <th pSortableColumn="lastName" style="width: 19%">
+            last Name <p-sortIcon field="lastName"></p-sortIcon>
+          </th>
+          <th pSortableColumn="creationDate" style="width: 19%">
+            Data <p-sortIcon field="creationDate"></p-sortIcon>
+          </th>
+          <th pSortableColumn="email" style="width: 25%">
+            email <p-sortIcon field="email"></p-sortIcon>
+          </th>
+          <th style="width: 19%">Option</th>
+        </tr>
+        <tr>
+          <th>
+            <p-columnFilter type="text" field="firstName"></p-columnFilter>
+          </th>
+          <th>
+            <p-columnFilter type="text" field="lastName"></p-columnFilter>
+          </th>
+          <th>
+            <p-columnFilter type="text" field="creationDate"></p-columnFilter>
+          </th>
+          <th>
+            <p-columnFilter type="text" field="email"></p-columnFilter>
+          </th>
+          <th></th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-users>
+        <tr>
+          <td>
+            {{ users.firstName }}
+          </td>
+          <td>
+            <span class="ml-1 vertical-align-middle">{{ users.lastName }}</span>
+          </td>
+          <td>
+            <span class="ml-1 vertical-align-middle">{{
+              users.creationDate | date
+            }}</span>
+          </td>
+
+          <td>{{ users.email }}</td>
+          <th class="btn_container">
+            <button routerLink="/user/user-edit/{{ users.id }}">Edit</button>
+            <button routerLink="/user/user-Detalis/{{ users.id }}">
+              Detalis
+            </button>
+
+            <button (click)="Delete(users.id)">delete</button>
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="emptymessage">
+        <tr>
+          <td colspan="5">No customers found.</td>
+        </tr>
+      </ng-template>
+    </p-table>
+
+    <p-paginator
+      (onPageChange)="onPageChange($event)"
+      [first]="pageNum"
+      [rows]="pageSize"
+      [totalRecords]="totalCount"
+    ></p-paginator>
+  </div>
+</div>

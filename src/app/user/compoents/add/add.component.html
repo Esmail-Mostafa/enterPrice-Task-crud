@@ -1,0 +1,34 @@
+<section class="Form_section">
+  <p-toast></p-toast>
+
+  <div class="section">
+    <form class="form_container" [formGroup]="FormDAta" (submit)="AddUser()">
+      <div>
+        <label for="">first Name</label>
+        <input formControlName="firstName" type="text" />
+      </div>
+      <div>
+        <label for="">last Name</label>
+        <input formControlName="lastName" type="text" />
+      </div>
+      <div>
+        <label for="">email</label>
+        <input formControlName="email" type="email" />
+      </div>
+      <div>
+        <label for="">password</label>
+        <input formControlName="password" type="password" />
+      </div>
+
+      <div>
+        <label for="">date</label>
+        <input formControlName="creationDate" type="date" />
+      </div>
+      <div class="btn_container">
+        <button class="btn_back" routerLink="/user/users">Back</button>
+
+        <button type="submit">Add User</button>
+      </div>
+    </form>
+  </div>
+</section>

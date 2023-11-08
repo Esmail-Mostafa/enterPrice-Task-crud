@@ -1,0 +1,66 @@
+
+
+@import "../style/variables";
+
+.Form_section {
+  .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    .form_container {
+      width: 50%;
+      background-color: $form_bg_color;
+      padding: 2rem;
+      border-radius: 20px;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
+      -o-border-radius: 20px;
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+        font-size: 0.95;
+      }
+      input {
+        width: 100%;
+        color: $Text_color;
+        height: 2.5rem;
+        font-size: 0.95;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        padding: 0 0.5rem;
+}
+      .btn_container {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        button {
+          color: $color;
+          font-size: 1rem;
+          font-weight: bold;
+          padding: 0.5rem 2rem;
+          border-radius: 10px;
+          border: none;
+          background-color: $btn_bg_color;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -ms-border-radius: 10px;
+          -o-border-radius: 10px;
+          cursor: pointer;
+          &:hover {
+            background-color: rgba(0, 128, 0, 0.292);;
+          }
+        }
+      }
+    }
+  }
+}
+.btn_back {
+  margin-inline-end: 1rem;
+}
